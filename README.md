@@ -13,8 +13,39 @@ We collected the data samples using the proposed beam-splitter acquisition syste
 In the near future, we will add more data samples with larger distortion to the dataset ...
 
 If you are interested in real-world datasets for pure deblurring tasks, please refer to [ESTRNN & BSD](https://github.com/zzh-tech/ESTRNN).
-## Prerequisites
 
+
+## Prerequisites (Updated for Toyon)
+The repository is now setup to be run in a devcontainer. A `Dockerfile` an `environment.yaml` are included in the `docker` directory that can be used to define the environment. The process to setup the environment is given here:
+
+1. Update the `Dockerfile` to include the appropriate cuda compute capability number based on your GPU. Line 59 in the snippet below is where you need up update the compute capability (next to `+PTX`). The instructions on where to find the compute capability number are given in the comments on lines 54 to 57 of the snippet below.
+
+```bash
+  54 # This is kind of annoying, but you need to put your gpu compute capability (the number by +PTX)
+  55 # This information can be found here: https://developer.nvidia.com/cuda-gpus
+  56 # Find your gpu and find the compute capability then copy the number next to the +PTX
+  57 # NOTE: this can also be found by running this command: nvidia-smi --query-gpu=compute_cap --format=csv
+  58 ENV FORCE_CUDA="1"
+  59 ARG TORCH_CUDA_ARCH_LIST="7.5+PTX"
+  60 ENV TORCH_CUDA_ARCH_LIST="${TORCH_CUDA_ARCH_LIST}"
+  61 ADD ./docker/packages_from_deepunrollnet packages_from_deepunrollnet
+  62 RUN pip install packages_from_deepunrollnet/package_core/
+  63 RUN pip install packages_from_deepunrollnet/package_correlation/
+  64 RUN pip install packages_from_deepunrollnet/package_forward_warp/
+  65 RUN python -m pip install "git+https://github.com/facebookresearch/detectron2.git"
+```
+
+2. Update the `devcontainer.json` located at `.devcontainer/devcontainer.json` to include your local volume mounts. 
+
+```bash
+ 10   "mounts": [
+ 11         "source=/path/to/data,target=/data,type=bind,consistency=cached"],
+```
+
+3. Open VisualStudioCode and select the green icon in the bottom left corner. If you have the correct dependencies installed then an option should pop up that says `Open folder in container`. Select that option then navigate to the root of the `RSCD-main` repository. If you do not have the proper dependencies installed then follow this tutorial: https://code.visualstudio.com/docs/devcontainers/tutorial
+
+
+## Setup instructions from the original repository. These instructions did not work for me
 Install the dependent packages:
 
 ```bash
