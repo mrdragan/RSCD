@@ -1,0 +1,7 @@
+# ninja log v5
+0	954	1674701912138513137	/home/mdragan/projects/rolling-shutter/RSCD-main/packages_from_deepunrollnet/package_correlation/build/temp.linux-x86_64-cpython-38/correlation_package_lib/corr_cuda_kernel.o	182f0d111447da25
+0	16941	1674701928114776209	/home/mdragan/projects/rolling-shutter/RSCD-main/packages_from_deepunrollnet/package_correlation/build/temp.linux-x86_64-cpython-38/correlation_package_lib/corr_cuda.o	3c971e3075052959
+0	17906	1674701929078792081	/home/mdragan/projects/rolling-shutter/RSCD-main/packages_from_deepunrollnet/package_correlation/build/temp.linux-x86_64-cpython-38/correlation_package_lib/python_bind.o	d75047e930f62980
+0	894	1674790100393894116	/workspaces/RSCD-main/docker/packages_from_deepunrollnet/package_correlation/build/temp.linux-x86_64-cpython-38/correlation_package_lib/corr_cuda_kernel.o	304a8bda8f18b646
+0	9731	1674790109226046567	/workspaces/RSCD-main/docker/packages_from_deepunrollnet/package_correlation/build/temp.linux-x86_64-cpython-38/correlation_package_lib/corr_cuda.o	a348d22936cf25d6
+0	12155	1674790111646088323	/workspaces/RSCD-main/docker/packages_from_deepunrollnet/package_correlation/build/temp.linux-x86_64-cpython-38/correlation_package_lib/python_bind.o	a670474c2da69902

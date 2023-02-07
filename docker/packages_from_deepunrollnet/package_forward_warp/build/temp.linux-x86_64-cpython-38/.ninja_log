@@ -1,0 +1,18 @@
+# ninja log v5
+0	474	1674701946467078382	/home/mdragan/projects/rolling-shutter/RSCD-main/packages_from_deepunrollnet/package_forward_warp/build/temp.linux-x86_64-cpython-38/forward_warp_package_lib/cuda_arithmetic.o	1d4ec2389411353d
+0	510	1674701946503078976	/home/mdragan/projects/rolling-shutter/RSCD-main/packages_from_deepunrollnet/package_forward_warp/build/temp.linux-x86_64-cpython-38/forward_warp_package_lib/cuda_renderer.o	452377b5a527fb58
+0	659	1674701946651081413	/home/mdragan/projects/rolling-shutter/RSCD-main/packages_from_deepunrollnet/package_forward_warp/build/temp.linux-x86_64-cpython-38/forward_warp_package_lib/cuda_common.o	32cd91199104b821
+1	16751	1674701962731346159	/home/mdragan/projects/rolling-shutter/RSCD-main/packages_from_deepunrollnet/package_forward_warp/build/temp.linux-x86_64-cpython-38/forward_warp_package_lib/flow_forward_shift.o	24cc2328f1c708e5
+1	17844	1674701963823364137	/home/mdragan/projects/rolling-shutter/RSCD-main/packages_from_deepunrollnet/package_forward_warp/build/temp.linux-x86_64-cpython-38/forward_warp_package_lib/python_bind.o	3581eb54c40f2eb6
+0	387	1674790142282616359	/workspaces/RSCD-main/docker/packages_from_deepunrollnet/package_forward_warp/build/temp.linux-x86_64-cpython-38/forward_warp_package_lib/cuda_arithmetic.o	b7adc786f087c78e
+1	500	1674790142394618287	/workspaces/RSCD-main/docker/packages_from_deepunrollnet/package_forward_warp/build/temp.linux-x86_64-cpython-38/forward_warp_package_lib/cuda_renderer.o	a341abae39023cec
+1	655	1674790142550620973	/workspaces/RSCD-main/docker/packages_from_deepunrollnet/package_forward_warp/build/temp.linux-x86_64-cpython-38/forward_warp_package_lib/cuda_common.o	b54f7dc2fa8bcdf9
+1	16324	1674790158210890480	/workspaces/RSCD-main/docker/packages_from_deepunrollnet/package_forward_warp/build/temp.linux-x86_64-cpython-38/forward_warp_package_lib/flow_forward_shift.o	d4a2c8748a3a5bbc
+1	18300	1674790160182924399	/workspaces/RSCD-main/docker/packages_from_deepunrollnet/package_forward_warp/build/temp.linux-x86_64-cpython-38/forward_warp_package_lib/python_bind.o	6b4645f6d6d4022c
+11	15845	1674791379075760108	/workspaces/RSCD-main/docker/packages_from_deepunrollnet/package_forward_warp/build/temp.linux-x86_64-cpython-38/forward_warp_package_lib/flow_forward_shift.o	d4a2c8748a3a5bbc
+11	17948	1674791381179795838	/workspaces/RSCD-main/docker/packages_from_deepunrollnet/package_forward_warp/build/temp.linux-x86_64-cpython-38/forward_warp_package_lib/python_bind.o	6b4645f6d6d4022c
+6	424	1674793705042481976	/workspaces/RSCD-main/docker/packages_from_deepunrollnet/package_forward_warp/build/temp.linux-x86_64-cpython-38/forward_warp_package_lib/cuda_arithmetic.o	bb1e698aa33cbc96
+6	507	1674793705126483336	/workspaces/RSCD-main/docker/packages_from_deepunrollnet/package_forward_warp/build/temp.linux-x86_64-cpython-38/forward_warp_package_lib/cuda_renderer.o	7cf9d7b6c7cf4cef
+6	631	1674793705250485343	/workspaces/RSCD-main/docker/packages_from_deepunrollnet/package_forward_warp/build/temp.linux-x86_64-cpython-38/forward_warp_package_lib/cuda_common.o	fd862083a62c6f26
+6	10079	1674793714690638223	/workspaces/RSCD-main/docker/packages_from_deepunrollnet/package_forward_warp/build/temp.linux-x86_64-cpython-38/forward_warp_package_lib/flow_forward_shift.o	fd96e60e7efd8dd7
+6	12009	1674793716622669521	/workspaces/RSCD-main/docker/packages_from_deepunrollnet/package_forward_warp/build/temp.linux-x86_64-cpython-38/forward_warp_package_lib/python_bind.o	8ef488623a77b12d
