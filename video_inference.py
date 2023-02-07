@@ -9,6 +9,7 @@ import torch.nn as nn
 from data.utils import prepare, prepare_reverse
 from data.distortion_prior import distortion_map
 import numpy as np
+from tqdm import tqdm
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--src', type=str, required=True, help='the path of input video')
@@ -36,7 +37,7 @@ width = int(vidcap.get(cv2.CAP_PROP_FRAME_WIDTH))
 height = int(vidcap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 # width = 640
 # height = 480
-fps = int(vidcap.get(cv2.CAP_PROP_FPS)) // 3
+fps = int(vidcap.get(cv2.CAP_PROP_FPS))# // 3
 fourcc = cv2.VideoWriter_fourcc(*"MJPG")
 size = (width, height)
 video = cv2.VideoWriter(args.dst, fourcc, fps, size)
@@ -48,7 +49,7 @@ with torch.no_grad():
     checkpoint = torch.load(args.checkpoint)
     model.load_state_dict(checkpoint['state_dict'])
     model.eval()
-    for _ in range(frames):
+    for _ in tqdm(range(frames)):
         _, img = vidcap.read()
         imgs.append(inp_pre(img, height, width))
         if len(imgs) < 3:
