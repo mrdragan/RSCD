@@ -1,0 +1,54 @@
+{
+	"name": "Rolling shutter DNN development container",
+	"build":
+	{
+		"context": "..",
+		"dockerfile": "../docker/Dockerfile",
+	},
+	"image": "docker.toyon.corp/python/deep-learning/rscd",
+	"runArgs": ["--shm-size", "32g", "--gpus", "device=0"],
+	"mounts": [
+        "source=/home/mdragan/projects/rolling-shutter/data,target=/data,type=bind,consistency=cached"],
+	"settings":
+	{
+	  "terminal.integrated.shell.linux": "/bin/bash",
+	  "python.pythonPath": "/opt/conda/bin/python",
+	  "python.linting.enabled": true,
+	  "python.linting.pylintEnabled": true,
+	  "python.linting.pylintPath": "/opt/conda/bin/pylint",
+	  "python.testing.unittestEnabled": false,
+	  "python.testing.nosetestsEnabled": false,
+	  "python.testing.pytestEnabled": true,
+	  "autoDocstring.docstringFormat": "numpy",
+	  // These two options attempt to block auto-updating packages. There are
+	 // A lot of issues with python v2022 such as (1) the debugger broke,
+	 // (2) generally, the extension seems to fail
+	  "extensions.autoCheckUpdates": false,
+	  "extensions.autoUpdate": "false",
+	  "remote.extensionKind":
+	  {
+	    "ms-azuretools.vscode-docker": "workspace"
+	  },
+	  "files.insertFinalNewline": false,
+	  "files.trimTrailingWhitespace": true,
+	  "[markdown]":
+	  {
+	    "files.trimTrailingWhitespace": false
+	  },
+      "trailing-spaces.highlightCurrentLine": false,
+	  "trailing-spaces.trimOnSave": true
+	},
+	"remoteUser": "developer",
+	//this is needed so that VScode doesn't overwrites the PATH variable.
+	"remoteEnv": {
+		"PATH": "${containerEnv:PATH}"
+	},
+	"extensions": [
+		"ms-azuretools.vscode-docker",
+		// "ms-python.python",
+		// "ms-python.vscode-pylance",
+		"ms-python.python@2021.10.1365161279",
+		"ms-python.vscode-pylance@2021.10.2",
+		"njpwerner.autodocstring",
+	]
+}
