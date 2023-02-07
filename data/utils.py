@@ -87,5 +87,5 @@ def prepare_reverse(x, centralize=False, normalize=False):
         x = x * rgb
     if centralize:
         x = x + rgb / 2
-
+    x = x.astype(np.uint8)
     return x
